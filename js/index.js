@@ -19,4 +19,13 @@ const colors = [
   "#A5A5A5",
 ];
 
-colors.forEach();
+function renderBox(hexColor) {
+  const newDiv = document.createElement("div");
+  newDiv.classList.add("color-box");
+  newDiv.style.backgroundColor = hexColor;
+  document.querySelector("body").append(newDiv);
+}
+
+colors.forEach((colors) => {
+  renderBox(colors);
+});
